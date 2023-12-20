@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --font-size : 16px;
+    --background-sidebar :#191718;
+    --text-color : #ffffff;
+
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ===================== SideBar ================== */
+.sideBar{
+    display: block;
+    width: 150px;
+    height: 935px;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background: var(--background-sidebar);
+}
+.sideBar a{
+    text-decoration: none;
+    display: block;
+    padding: 14px 91px 11px 16px;
+    color: #5C5C5C;
+    border-bottom: solid gray 1px;
+    position: relative;
+    font-weight: 700;
+    font-size: var(--font-size);
+    line-height: 19px;
+    transition: all .5s;
+}
+.sideBar a:hover{
+    color: #ffffff;
+    background-color: #5C5C5C;
+}
+.sideBar a.active{
+    color: #ffffff;
+    background-color: #5C5C5C;
+}
+
+
+/* ======================== CONTENT ===================== */
+.content-right{
+    width: 100%;
+
+}
+.logo{
+    width: 310px;
+    height: 122px;
+    margin: 0 auto;
+}
+.content__intro{
+    display: inline-block;
+    margin: 20px 0 0 235px;
+    width: 80%;
+    background: #EFEFEF;
+    text-align: center;
+
+    height: 210px;
+
+}
+.content__intro h5{
+    padding : 35px 0 15px ;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 10px 0 0;
+}
+.content__intro p{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.content__item{
+    column-gap: 10px;
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 200px;
+}
+.content__item .item:nth-child(2){
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.content__item .item h3{
+    grid-column: 1/span 2;
+    font-weight: 700;
+    line-height: 28px
+}
+.content__item .item p{
+    text-align: justify;
+    font-weight: 400;
+    font-size: var(--font-size);
+    line-height: 19px;
+}
+.content__item .item img{
+
+    margin-right: 10px;
+    float: left;
+    width: 128px;
+    height: 128px;
+}
+
+
+/* ================== FOOTER =================== */
+footer{
+
+    border-top: 1px solid #DEDEDE;
+}
+footer p{
+    width: 70%;
+    position: relative;
+    left:15%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #3E3E3E;
+}
+
+
+@media screen and (max-width:320px){
+    body{
+        box-sizing: border-box;
+    }
+    /* ======= SideBar ======= */
+    .content-left .sideBar{
+        width: 100%;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        margin: 0 auto;
+        text-align: center;
+        position: fixed;
+
+    }
+    .content-left .sideBar a{
+        border-right: solid gray 1px;
+        padding: 10px 10px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    /* ========= Logo ===========*/
+    .logo{
+        background-image: cover;
+        width: 10px;
+        display: flex;
+        position: relative;
+        top: 50px;
+        align-items: center;
+    }
+    /* =========== Intro ========== */
+    .content__intro{
+        position: relative;
+        top : 50px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+    .content__intro h5{
+        display: inline-block;
+        padding : 35px 0 15px ;
+        line-height: 21px;
+        margin: 10px 0 0;
+
+    }
+    .content__intro p{
+        text-align: justify;
+        margin: 0 auto;
+        line-height: 19px;
+    }
+    .content__item{
+        position: relative;
+        top: 50px;
+        display: flex;
+        align-items: center;
+        width: 70%;
+        padding-bottom: 100px;
+    }
+    /* =========== Footer =========== */
+    footer{
+        width: 100%;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #3E3E3E;
+    }
+
+}
